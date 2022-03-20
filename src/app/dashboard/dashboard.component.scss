@@ -1,0 +1,52 @@
+.dashboard-container {
+  width: 400px;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  
+  .manual-auto-container {
+    height: 50px;
+    width: 50%;
+
+    border-radius: 7px;
+    border: 2px solid black;
+    background-color: rgb(49, 88, 13);
+  }
+  
+  .bet-amounts-container {
+    height: 120px;
+    width: 100%;
+    
+    border-radius: 7px;
+    border: 2px solid black;
+    background-color: rgb(49, 88, 13);
+  }
+  
+  .field-size-container {
+    height: 100px;
+    width: 100%;
+    
+    border-radius: 7px;
+    border: 2px solid black;
+    background-color: rgb(49, 88, 13);
+  }
+
+  .bet-button{
+    width: 100%;
+    height: 60px;
+
+    color: black;
+    background-color: rgb(121, 199, 12);
+    border-radius: 7px;
+    border: none;
+    box-shadow: 0px 2px 3px 0px black;
+    cursor: pointer;
+
+    &:active {
+      box-shadow: 0px -2px 3px 0px black;
+    }
+  }
+}

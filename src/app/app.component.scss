@@ -1,0 +1,12 @@
+.game-container {
+  width: 100vw;
+  height: 100vh;
+
+  background: rgb(0,69,25);
+  background: linear-gradient(180deg, rgb(0, 87, 32) 0%, rgba(0,232,83,1) 100%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}

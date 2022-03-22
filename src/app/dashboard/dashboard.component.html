@@ -1,6 +1,9 @@
 <section class="dashboard-container">
-  <div class="manual-auto-container"></div>
+  <div class="manual-auto-container">
+    <button class="manual">Manual</button>
+    <button class="auto">Auto</button>
+  </div>
   <div class="bet-amounts-container"></div>
   <div class="field-size-container"></div>
-  <button class="bet-button">BET</button>
+  <button (click)="onClickBet()" class="bet-button">BET</button>
 </section>

@@ -28,18 +28,18 @@ export class ArenaComponent implements OnInit, OnDestroy {
 
   onDone(e: string) {
     if (e === "Defeat") {
-      console.log("waasxi");
       this.currentColumn = -1;
+      this.service.betAmount$.next("Defeat");
     } else if (this.currentColumn == this.columns.length - 1) {
-      console.log("momilocavs");
       this.currentColumn = -1;
+      this.service.betAmount$.next(this.currentColumn + 1);
     } else {
       this.currentColumn++;
+      this.service.betAmount$.next(this.currentColumn);
     }
   }
 
   ngOnDestroy(): void {
     this.subscribtion.unsubscribe();
   }
-
 }

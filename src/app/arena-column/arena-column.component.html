@@ -1,5 +1,5 @@
 <div class="column-container">
-  <div class="arrow-hiden" [ngClass]="{'arrow': playing}">↓</div>
+  <i class="arrow-hiden bi bi-chevron-down" [ngClass]="{'arrow': playing}"></i>
   <div *ngFor="let item of boxs; let i = index" [ngClass]="{'playing': playing || played, 'bomb': bombIndex == i, 'ball': BallIndex == i}" (click)="onClickBox(i)" class="box"></div>
-  <div class="bet" [ngClass]="{'bet-playing': playing}">x1.15</div>
+  <div class="bet" [ngClass]="{'bet-playing': playing}">x{{betOnColumn * (columnIndex + 1)}}</div>
 </div>

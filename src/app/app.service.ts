@@ -6,6 +6,7 @@ import { Subject } from 'rxjs';
 })
 export class AppService {
   betStart$ = new Subject(); //to know when to start and end game
+  betAmount$ = new Subject();
 
   constructor() { }
 }

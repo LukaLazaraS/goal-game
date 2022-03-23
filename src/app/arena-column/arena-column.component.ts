@@ -9,12 +9,15 @@ import { Howl } from 'howler';
 export class ArenaColumnComponent implements OnInit {
   @Input() played: boolean = false;
   @Input() playing: boolean = false;
+  @Input() columnIndex: number = 0;
   @Output() done = new EventEmitter<string>();
 
   boxs: any[] = new Array(3);
 
   bombIndex!: number;
   BallIndex!: number;
+
+  betOnColumn: number = 1.25;
 
   constructor() { }
 
@@ -34,6 +37,5 @@ export class ArenaColumnComponent implements OnInit {
       }
       this.bombIndex = bombIndex;
     }
-
   }
 }

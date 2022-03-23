@@ -3,7 +3,17 @@
     <button class="manual">Manual</button>
     <button class="auto">Auto</button>
   </div>
-  <div class="bet-amounts-container"></div>
-  <div class="field-size-container"></div>
-  <button (click)="onClickBet()" class="bet-button">BET</button>
+    <div class="bet-amounts-container d-flex flex-column justify-content-center align-items-center">
+      <label for="bet-input">Bet amount$</label>
+      <input #input class="bet-input" id="bet-input" type="number" value="1.00">
+    </div>
+  <div class="field-size-container d-flex flex-column justify-content-center align-items-center">
+    <h6>Field Size</h6>
+    <div class="buttons-container d-flex justify-content-center">
+      <button><div class="circle"></div> Small</button>
+      <button><div class="circle"></div>Medium</button>
+      <button><div class="circle"></div>Big</button>
+    </div>
+  </div>
+  <button (click)="onClickBet(input)" class="bet-button" [ngClass]="{'blue-button': playing, 'red-button': lost}">{{lost ? "YOU LOST" : playing ? "CASHOUT " + outputBetValue + " $" : "BET"}}</button>
 </section>
